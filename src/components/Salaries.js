@@ -15,16 +15,18 @@ class Salaries extends Component {
             console.log("hellooo");
             
             event.preventDefault();
-            const salary1 = this.state.salary1;
-            const salary2 = this.state.salary2; 
+            // event.reset();
+
+            const salary1 = Number(this.state.salary1) ;
+            const salary2 = Number(this.state.salary2); 
 
             if (!salary1 || !salary2 ){
                 return;
             }
             
             this.props.onSalarySubmit({
-                salary1: salary1,
-                salary2: salary2
+                salary1,
+                salary2
             })
 
             this.setState({

@@ -3,22 +3,34 @@ import Salaries from '../components/Salaries';
 
 
 
+
 class MortgageCalculator extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            salaries: [],
-            maxPropertyValue: 0
+            salaries: {}
         }
         this.handleSalarySubmit = this.handleSalarySubmit.bind(this);
+        this.calculateAffordability = this.calculateAffordability.bind(this);
         }
 
+        
+
         handleSalarySubmit(submittedSalaries){
-            const newSalaries = [...this.state.salaries, submittedSalaries];
             this.setState({
-                salaries: newSalaries
-            })
+                salaries: submittedSalaries
+               });
+              
         }
+
+        calculateAffordability(){
+            const totalSalaries = this.state.salaries.salary1 + this.state.salaries.salary2;
+            const affordabily = totalSalaries * 3
+            return  affordabily
+            }
+            
+        
+       
 
     render(){
         return(
@@ -28,57 +40,8 @@ class MortgageCalculator extends Component {
             </div>
         )
     }
- 
 }
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-export default MortgageCalculator;
+
+ export default MortgageCalculator;
+
