@@ -6,7 +6,7 @@ class MortgageCalculator extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            salaries: [1000, 1000]
+            salaries: []
         }
     }
 
@@ -20,6 +20,10 @@ class MortgageCalculator extends Component {
     }
  
 }
+ 
+ 
+ 
+ 
  
  
  
