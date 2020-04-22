@@ -20,9 +20,9 @@ class Salaries extends Component {
             const salary1 = Number(this.state.salary1) ;
             const salary2 = Number(this.state.salary2); 
 
-            if (!salary1 || !salary2 ){
-                return;
-            }
+            // if (!salary1 || !salary2 ){
+            //     return;
+            // }
             
             this.props.onSalarySubmit({
                 salary1,

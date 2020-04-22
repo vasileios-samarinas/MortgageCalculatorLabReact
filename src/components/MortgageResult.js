@@ -1,8 +1,13 @@
 import React from 'react';
 
-const MortgageResult = () => {
+const MortgageResult = (props) => {
 
-    return ( null );
+    
+
+    return ( 
+        
+    <h2>you can afford ...{props.result()}</h2>
+     );
 }
  
 export default MortgageResult;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Salaries from '../components/Salaries';
+import MortgageResult from '../components/MortgageResult';
 
 
 
@@ -20,7 +21,7 @@ class MortgageCalculator extends Component {
             this.setState({
                 salaries: submittedSalaries
                });
-              
+              this.calculateAffordability();
         }
 
         calculateAffordability(){
@@ -29,14 +30,12 @@ class MortgageCalculator extends Component {
             return  affordabily
             }
             
-        
-       
-
     render(){
         return(
             <div className="mortgage-calculator">
                 <h2>Mortgage Calculator loves you!</h2>
                 <Salaries salaries ={this.state.salaries} onSalarySubmit={this.handleSalarySubmit}/>
+                <MortgageResult result={this.calculateAffordability}/>
             </div>
         )
     }
@@ -44,4 +43,12 @@ class MortgageCalculator extends Component {
  
 
  export default MortgageCalculator;
+
+
+
+
+
+
+
+
 
